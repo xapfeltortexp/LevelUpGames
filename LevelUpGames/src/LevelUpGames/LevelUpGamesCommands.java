@@ -47,7 +47,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("toggle")) {
 				if (args.length > 1) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpgames.toggle")) {
 					noPerms(player);
@@ -67,7 +67,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("join")) {
 				if (args.length > 1) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.join")) {
 					noPerms(player);
@@ -91,7 +91,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("leave")) {
 				if (args.length > 1) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.join")) {
 					noPerms(player);
@@ -110,7 +110,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("kick")) {
 				if ((args.length > 2) || (args.length == 1)) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.kick")) {
 					noPerms(player);
@@ -143,7 +143,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("info")) {
 				if ((args.length > 2) || (args.length == 1)) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.info")) {
 					noPerms(player);
@@ -155,7 +155,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("start")) {
 				if (args.length > 1) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.start")) {
 					noPerms(player);
@@ -178,7 +178,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 			if (args[0].equalsIgnoreCase("stop")) {
 				if (args.length > 1) {
 					toMuchArgs(player);
-					return false;
+					return true;
 				}
 				if (!player.hasPermission("LevelUpGames.stop")) {
 					noPerms(player);
