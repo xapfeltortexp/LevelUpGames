@@ -8,7 +8,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import us.manniL.xapfeltortexp.LevelUpGames.cmd.LevelUpGamesCommands;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.ljoin;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lkick;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lleave;
@@ -26,21 +25,21 @@ public class LevelUpGamesMain extends JavaPlugin {
 	public ArrayList<String> players = new ArrayList<String>();
 	public int limit;
 	public int HowMuchCanJoin;
-	private LevelUpGamesCommands lugc;
-	
+	public int RandomSpawnRadius;
+	public int MaximumLevel;
+
 	public ChatColor red = ChatColor.RED;
 	public ChatColor blue = ChatColor.BLUE;
 	public ChatColor gray = ChatColor.GRAY;
-	
+
 	public String prefix = this.blue + "[" + this.gray + "LevelUpGames" + this.blue + "] ";
-	
+
 	public HashMap<String, SubBase> commands = new HashMap<String, SubBase>();
 
 	public void onEnable() {
-		Instance=this;
-		this.lugc = new LevelUpGamesCommands(this);
-		getCommand("LevelUpGames").setExecutor(this.lugc);
-		
+
+		Instance = this;
+
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 		load_config();
@@ -51,7 +50,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 		this.log.info("[LevelUpGames] Plugin successful enabled.");
 
 		getServer().getPluginManager().registerEvents(new LevelUpGamesListener(this), this);
-		
+
 		this.getCommand("lug").setExecutor(new CommandReg(this));
 		commands.clear();
 		commands.put("kick", new lkick(this));
@@ -71,7 +70,10 @@ public class LevelUpGamesMain extends JavaPlugin {
 
 	private void load_config() {
 		this.HowMuchCanJoin = getConfig().getInt("LevelUpGames.HowMuchCanJoin", 20);
+		this.RandomSpawnRadius = getConfig().getInt("LevelUpGames.RandomSpawnRadius", 40);
+		this.MaximumLevel = getConfig().getInt("LevelUpGames.MaximumLevel", 32);
 	}
+
 	public void noPerms(Player player) {
 		player.sendMessage(this.prefix + this.gray + "You dont have Permissions.");
 	}
