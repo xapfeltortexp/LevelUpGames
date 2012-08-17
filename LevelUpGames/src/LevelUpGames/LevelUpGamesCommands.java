@@ -127,7 +127,7 @@ public class LevelUpGamesCommands implements CommandExecutor {
 
 				Player target = Bukkit.getServer().getPlayer(args[1]);
 				if (target == null) {
-					player.sendMessage(this.prefix + this.blue + target.getName() + this.gray + " not found.");
+					player.sendMessage(this.prefix + this.blue + args[1] + this.gray + " not found.");
 					return true;
 				}
 				if (!this.plugin.players.contains(target.getName())) {
