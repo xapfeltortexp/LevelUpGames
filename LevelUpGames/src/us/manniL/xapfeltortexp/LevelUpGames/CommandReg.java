@@ -10,7 +10,7 @@ public class CommandReg extends CommandBase {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdLine, String[] args) {
-		if (cmd.getName().equalsIgnoreCase("g")) {
+		if (cmd.getName().equalsIgnoreCase("lug")) {
 			if (args.length > 0) {
 				String s = "";
 		        for (String sa : args) {
