@@ -1,10 +1,7 @@
 name: LevelUpGames
-author: [ManniL, xapfeltortexp]
+author: [manniL, xapfeltortexp]
 version: 1.0
-
 main: us.manniL.xapfeltortexp.LevelUpGames.LevelUpGamesMain
-
 commands:
-  LevelUpgames:
+  lug:
     description: LevelUpgames Plugin
-    aliases: [lug]
