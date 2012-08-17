@@ -33,9 +33,9 @@ public class lkick extends SubBase {
 			return;
 		}
 
-		Player target = Bukkit.getServer().getPlayer(args[0]);
+		Player target = (Player) Bukkit.getServer().getPlayer(args[0]);
 		if (target == null) {
-			player.sendMessage(plugin.prefix + plugin.blue + target.getName() + plugin.gray + " not found.");
+			player.sendMessage(plugin.prefix + plugin.blue + args[0] + plugin.gray + " not found.");
 			return;
 		} else {
 			if (!this.plugin.players.contains(target.getName())) {
