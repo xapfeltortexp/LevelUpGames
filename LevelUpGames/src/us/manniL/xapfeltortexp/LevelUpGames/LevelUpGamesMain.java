@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.LevelUpGamesCommands;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lkick;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.ltoggle;
 import us.manniL.xapfeltortexp.LevelUpGames.listeners.LevelUpGamesListener;
 
 public class LevelUpGamesMain extends JavaPlugin {
@@ -49,6 +50,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 		this.getCommand("lug").setExecutor(new CommandReg(this));
 		commands.clear();
 		commands.put("kick", new lkick(this));
+		commands.put("toggle", new ltoggle(this));
 	}
 
 	public void onDisable() {
