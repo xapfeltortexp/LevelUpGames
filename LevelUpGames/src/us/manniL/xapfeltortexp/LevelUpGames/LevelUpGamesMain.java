@@ -8,6 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.lcredits;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.ljoin;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lkick;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lleave;
@@ -60,6 +61,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 		commands.put("join", new ljoin(this));
 		commands.put("leave", new lleave(this));
 		commands.put("stop", new lstop(this));
+		commands.put("credits", new lcredits(this));
 	}
 
 	public void onDisable() {

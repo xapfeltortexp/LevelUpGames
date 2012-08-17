@@ -39,7 +39,7 @@ public class CommandReg extends CommandBase {
 			                	return true;
 		                }
 		            } else {
-		            	sender.sendMessage("Write /lug for help!");
+		            	sender.sendMessage(plugin.prefix + plugin.blue + args[1] + plugin.gray + " not found! /lug for all Commands.");
 		            	return true;
 		            }
 		        } catch (Exception e) {
