@@ -1,1 +1,22 @@
+######################################################################
+#                                                                    #
+#     Welcome to the Config.yml from the Plugin LevelUpGames!        # 
+#                                                                    #
+#     HowMuchCanJoin means the Limit, how much Players can join      #
+#     to the LevelUpGames.                                           #
+#                                                                    #
+#     RandomSpawnRadius means the Radius from the /lug setspawn.     #
+#     Players will spawn random in this Radius.                      # 
+#                                                                    #
+#     MaxiumumLevel means the MaximumLevel I can reach before the    #
+#     game finished.                                                 #
+#                                                                    #
+#                                                                    #
+#   Want a Special Plugin? Contact us in Skype jan_hoeck | mannil4   #
+######################################################################
+
 HowMuchCanJoin: 20
+
+RandomSpawnRadius: 40
+
+MaximumLevel: 32

@@ -27,6 +27,9 @@ public class LevelUpGamesMain extends JavaPlugin {
 	public int limit;
 	public int HowMuchCanJoin;
 	public int RandomSpawnRadius;
+	public int RandomSpawnX;
+	public int RandomSpawnY;
+	public int RandomSpawnZ;
 	public int MaximumLevel;
 
 	public ChatColor red = ChatColor.RED;
@@ -71,6 +74,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 	}
 
 	private void load_config() {
+		this.getConfig().options().header();
 		this.HowMuchCanJoin = getConfig().getInt("LevelUpGames.HowMuchCanJoin", 20);
 		this.RandomSpawnRadius = getConfig().getInt("LevelUpGames.RandomSpawnRadius", 40);
 		this.MaximumLevel = getConfig().getInt("LevelUpGames.MaximumLevel", 32);
