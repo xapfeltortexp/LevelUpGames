@@ -32,14 +32,14 @@ public class CommandReg extends CommandBase {
 		            if (plugin.commands.containsKey(s1)) {
 		                SubBase base = (SubBase)plugin.commands.get(s1);
 		                if (base == null) {
-		                	sender.sendMessage("Command class not found!");
+		                	sender.sendMessage(plugin.prefix + plugin.gray + "Command class not found!");
 		                    return true;
 		                } else {
 		                		base.run(sender, as);
 			                	return true;
 		                }
 		            } else {
-		            	sender.sendMessage("Write /lg for help!");
+		            	sender.sendMessage("Write /lug for help!");
 		            	return true;
 		            }
 		        } catch (Exception e) {
@@ -48,7 +48,9 @@ public class CommandReg extends CommandBase {
 		            return true;
 		        }
 			} else {
-				//Insert /lug overview here!
+				sender.sendMessage(plugin.blue + "=== " + plugin.prefix + "===");
+				sender.sendMessage("");
+				sender.sendMessage(plugin.blue + "/lug toggle " + plugin.gray + "= Start the LevelUpGames.");
 			}
 		}
 		return false;
