@@ -1,7 +1,5 @@
 package us.manniL.xapfeltortexp.LevelUpGames.cmd;
 
-import java.util.Random;
-
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -26,25 +24,14 @@ public class lsetspawn extends SubBase {
 		 plugin.toMuchArgs(p);
 		}
 		Location l = p.getLocation();
-		int r = Integer.parseInt(args[0])+1;
-		Random r1 = new Random();
-		Random r2 = new Random();
-		int z = r1.nextInt(r);
-		int x = r2.nextInt(r);
-		int sign1 = r1.nextInt(2);
-		int sign2 = r2.nextInt(2);
-		if(sign1 == 1){
-			z = -(z);
-		}
-		if(sign2 == 1){
-			x = -(x);
-		}
-		plugin.getConfig().set("RandomSpawnRadius", r-1);
+		int r = Integer.parseInt(args[0]);
+		plugin.getConfig().set("RandomSpawnRadius", r);
 		plugin.getConfig().set("RandomSpawn.x",l.getX());
 		plugin.getConfig().set("RandomSpawn.y",l.getY());
 		plugin.getConfig().set("RandomSpawn.z",l.getZ());
+		plugin.getConfig().set("RandomSpawn.w", l.getWorld().getName());
 		plugin.saveConfig();
-		sender.sendMessage("");
+		sender.sendMessage("Spawn set!");
 	}
 
 }
