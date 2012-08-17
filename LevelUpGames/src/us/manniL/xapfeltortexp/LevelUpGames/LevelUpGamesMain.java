@@ -9,7 +9,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.LevelUpGamesCommands;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.ljoin;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.lkick;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.lleave;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.lsetspawn;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.lstart;
+import us.manniL.xapfeltortexp.LevelUpGames.cmd.lstop;
 import us.manniL.xapfeltortexp.LevelUpGames.cmd.ltoggle;
 import us.manniL.xapfeltortexp.LevelUpGames.listeners.LevelUpGamesListener;
 
@@ -51,6 +56,11 @@ public class LevelUpGamesMain extends JavaPlugin {
 		commands.clear();
 		commands.put("kick", new lkick(this));
 		commands.put("toggle", new ltoggle(this));
+		commands.put("setspawn", new lsetspawn(this));
+		commands.put("start", new lstart(this));
+		commands.put("join", new ljoin(this));
+		commands.put("leave", new lleave(this));
+		commands.put("stop", new lstop(this));
 	}
 
 	public void onDisable() {
