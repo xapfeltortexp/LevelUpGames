@@ -39,7 +39,7 @@ public class lstop extends SubBase {
 			for (int i = 0; i < this.plugin.players.size(); i++) {
 				Bukkit.getServer().getPlayer((String) plugin.players.get(i)).teleport(Bukkit.getServer().getPlayer((String) this.plugin.players.get(i)).getWorld().getSpawnLocation());
 			}
-
+			plugin.players.clear();
 			this.plugin.limit = 0;
 			return;
 		}

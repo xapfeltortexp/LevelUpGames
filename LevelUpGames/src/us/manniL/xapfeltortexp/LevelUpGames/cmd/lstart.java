@@ -1,7 +1,6 @@
 package us.manniL.xapfeltortexp.LevelUpGames.cmd;
 
 import java.util.Random;
-import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -39,24 +38,24 @@ public class lstart extends SubBase {
 		if (this.plugin.toggle) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You started the LevelUpGames.");
 
-			for (int i = 0; i < this.plugin.players.size(); i++){
-				int r = plugin.getConfig().getInt("RandomSpawnRadius");
-				Player p = Bukkit.getPlayer(plugin.players.get(i));
-				Random r1 = new Random();
-				Random r2 = new Random();
-				int z = r1.nextInt(r);
-				int x = r2.nextInt(r);
-				int sign1 = r1.nextInt(2);
-				int sign2 = r2.nextInt(2);
-				if(sign1 == 1){
-					z = -(z);
+			for (int i = 0; i < this.plugin.players.size(); i++) {
+					int r = plugin.getConfig().getInt("RandomSpawnRadius");
+					Player p = Bukkit.getPlayer(plugin.players.get(i));
+					Random r1 = new Random();
+					Random r2 = new Random();
+					int z = r1.nextInt(r);
+					int x = r2.nextInt(r);
+					int sign1 = r1.nextInt(2);
+					int sign2 = r2.nextInt(2);
+					if(sign1 == 1){
+						z = -(z);
+					}
+					if(sign2 == 1){
+						x = -(x);
+					}
+					
+					p.teleport(new Location(Bukkit.getWorld(plugin.getConfig().getString("RandomSpawn.w")), x, plugin.getConfig().getDouble("RandowmSpawn.y"), z));
 				}
-				if(sign2 == 1){
-					x = -(x);
-				}
-				p.teleport(new Location(Bukkit.getWorld(plugin.getConfig().getString("RandomSpawn.w")), x, plugin.getConfig().getDouble("RandowmSpawn.y"), z));
-			}
-				
 			this.plugin.toggle = false;
 			this.plugin.start = true;
 			return;

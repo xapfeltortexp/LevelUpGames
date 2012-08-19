@@ -2,6 +2,7 @@ package us.manniL.xapfeltortexp.LevelUpGames;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
@@ -31,6 +32,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 	public int RandomSpawnY;
 	public int RandomSpawnZ;
 	public int MaximumLevel;
+	public List <String> VIPPlayers;
 
 	public ChatColor red = ChatColor.RED;
 	public ChatColor blue = ChatColor.BLUE;
@@ -78,6 +80,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 		this.HowMuchCanJoin = getConfig().getInt("LevelUpGames.HowMuchCanJoin", 20);
 		this.RandomSpawnRadius = getConfig().getInt("LevelUpGames.RandomSpawnRadius", 40);
 		this.MaximumLevel = getConfig().getInt("LevelUpGames.MaximumLevel", 32);
+		this.VIPPlayers = getConfig().getStringList("LevelUpGames.VIPPlayers");
 	}
 
 	public void noPerms(Player player) {

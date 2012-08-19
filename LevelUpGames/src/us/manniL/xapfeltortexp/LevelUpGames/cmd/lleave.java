@@ -33,7 +33,7 @@ public class lleave extends SubBase {
 		}
 		player.teleport(player.getWorld().getSpawnLocation());
 		this.plugin.players.remove(player.getName());
-		this.plugin.limit -= 1;
+		this.plugin.limit--;
 		player.sendMessage(plugin.prefix + plugin.gray + "You leaved the LevelUpGames.");
 		return;
 	}
