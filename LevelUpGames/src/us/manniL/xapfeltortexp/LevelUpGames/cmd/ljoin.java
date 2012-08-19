@@ -31,6 +31,12 @@ public class ljoin extends SubBase {
 			player.sendMessage(plugin.prefix + plugin.gray + "The LevelUpGames arent open yet.");
 			return;
 		}
+		if(plugin.VIPPlayers.contains(player.getName())) {
+			this.plugin.limit++;
+			this.plugin.players.add(player.getName());
+			player.sendMessage("" + plugin.limit);
+			return;
+		}
 		if (this.plugin.limit == this.plugin.HowMuchCanJoin) {
 			player.sendMessage(plugin.prefix + plugin.gray + "The LevelUpGames are full.");
 			return;
@@ -41,8 +47,9 @@ public class ljoin extends SubBase {
 		}
 		if (this.plugin.toggle) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You successful added to the Waiting List.");
-			this.plugin.limit += 1;
+			this.plugin.limit++;
 			this.plugin.players.add(player.getName());
+			player.sendMessage("" + plugin.limit);
 			return;
 		}
 	}
