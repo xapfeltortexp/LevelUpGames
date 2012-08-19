@@ -45,7 +45,7 @@ public class lkick extends SubBase {
 		}
 		target.teleport(target.getWorld().getSpawnLocation());
 		this.plugin.players.remove(target.getName());
-		this.plugin.limit -= 1;
+		this.plugin.limit --;
 		player.sendMessage(plugin.prefix + plugin.gray + "You kicked " + plugin.blue + target.getName() + plugin.gray + " from the LevelUpGames.");
 		return;
 	}

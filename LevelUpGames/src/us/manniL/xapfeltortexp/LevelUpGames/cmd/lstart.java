@@ -34,8 +34,9 @@ public class lstart extends SubBase {
 		if (this.plugin.toggle) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You started the LevelUpGames.");
 
-			for (int i = 0; i < this.plugin.players.size(); i++)
-				;
+			for (int i = 0; i < this.plugin.players.size(); i++) {
+				//Player teleport to the Random Spawn.s
+			}
 			this.plugin.toggle = false;
 			this.plugin.start = true;
 			return;

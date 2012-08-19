@@ -35,6 +35,10 @@ public class ljoin extends SubBase {
 			player.sendMessage(plugin.prefix + plugin.gray + "The LevelUpGames are full.");
 			return;
 		}
+		if(plugin.players.contains(player.getName())) {
+			player.sendMessage(plugin.prefix + plugin.gray + "You are already in the Waiting List.");
+			return;
+		}
 		if (this.plugin.toggle) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You successful added to the Waiting List.");
 			this.plugin.limit += 1;

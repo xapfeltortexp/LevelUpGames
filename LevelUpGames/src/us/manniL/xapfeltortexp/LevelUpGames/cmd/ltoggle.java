@@ -30,12 +30,13 @@ public class ltoggle extends SubBase {
 			}
 			if (!this.plugin.toggle) {
 				this.plugin.toggle = true;
-				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "on");
+				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "ON");
+			    plugin.getServer().broadcastMessage(plugin.prefix + plugin.gray + "The LevelUpGames are started! /lug join");
 				return;
 			}
 			if (this.plugin.toggle) {
 				this.plugin.toggle = false;
-				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "off");
+				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "OFF");
 				return;
 			}
 		}

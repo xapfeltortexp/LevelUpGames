@@ -26,6 +26,7 @@ public class lcredits extends SubBase {
 		player.sendMessage(plugin.prefix + plugin.gray + "Plugin Developers:");
 		player.sendMessage(plugin.blue + "manniL - http://coding.evo-network.de/");
 		player.sendMessage(plugin.blue + "xapfeltortexp -  http://LostForce.com/");
+		return;
 	}
 
 }
