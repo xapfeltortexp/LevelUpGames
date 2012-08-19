@@ -53,7 +53,6 @@ public class lstart extends SubBase {
 					if(sign2 == 1){
 						x = -(x);
 					}
-					
 					p.teleport(new Location(Bukkit.getWorld(plugin.getConfig().getString("RandomSpawn.w")), x, plugin.getConfig().getDouble("RandowmSpawn.y"), z));
 				}
 			this.plugin.toggle = false;
