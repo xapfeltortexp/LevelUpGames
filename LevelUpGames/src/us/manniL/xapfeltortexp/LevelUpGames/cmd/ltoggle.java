@@ -34,8 +34,7 @@ public class ltoggle extends SubBase {
 			return;
 		}
 		if (this.plugin.toggle == true) {
-			this.plugin.toggle = false;
-			player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "OFF");
+			player.sendMessage(plugin.prefix + plugin.gray + "To Stop the LevelUpGames try " + plugin.blue + "/lug stop");
 			return;
 		}
 	}

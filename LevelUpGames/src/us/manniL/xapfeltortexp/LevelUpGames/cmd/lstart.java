@@ -31,11 +31,11 @@ public class lstart extends SubBase {
 			plugin.noPerms(player);
 			return;
 		}
-		if (!this.plugin.toggle) {
+		if (!this.plugin.toggle == false) {
 			player.sendMessage(plugin.prefix + plugin.gray + "The LevelUpGames arent started yet.");
 			return;
 		}
-		if (this.plugin.toggle) {
+		if (this.plugin.toggle == true) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You started the LevelUpGames.");
 			Bukkit.broadcastMessage(plugin.prefix + plugin.gray + "The LevelUpGames Started! Good Luck!");
 			for (int i = 0; i < this.plugin.players.size(); i++) {
@@ -54,7 +54,10 @@ public class lstart extends SubBase {
 						x = -(x);
 					}
 					p.teleport(new Location(Bukkit.getWorld(plugin.getConfig().getString("RandomSpawn.w")), x, plugin.getConfig().getDouble("RandowmSpawn.y"), z));
-				}
+					
+					// ALLE SPIELER IN DER LISTE BEKOMMEN ÜBER DEN SKIN Level 1
+				
+			}
 			this.plugin.toggle = false;
 			this.plugin.start = true;
 			return;
