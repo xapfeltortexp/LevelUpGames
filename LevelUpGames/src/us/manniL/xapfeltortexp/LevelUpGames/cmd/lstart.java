@@ -37,7 +37,7 @@ public class lstart extends SubBase {
 		}
 		if (this.plugin.toggle) {
 			player.sendMessage(plugin.prefix + plugin.gray + "You started the LevelUpGames.");
-
+			Bukkit.broadcastMessage(plugin.prefix + plugin.gray + "The LevelUpGames Started! Good Luck!");
 			for (int i = 0; i < this.plugin.players.size(); i++) {
 					int r = plugin.getConfig().getInt("RandomSpawnRadius");
 					Player p = Bukkit.getPlayer(plugin.players.get(i));

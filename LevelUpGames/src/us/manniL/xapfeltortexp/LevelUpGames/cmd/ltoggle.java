@@ -19,26 +19,24 @@ public class ltoggle extends SubBase {
 			return;
 		}
 		final Player player = (Player) sender;
-		if (args[0].equalsIgnoreCase("toggle")) {
-			if (args.length > 1) {
-				plugin.toMuchArgs(player);
-				return;
-			}
-			if (!player.hasPermission("LevelUpgames.toggle")) {
-				plugin.noPerms(player);
-				return;
-			}
-			if (this.plugin.toggle == false) {
-				this.plugin.toggle = true;
-				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "ON");
-			    plugin.getServer().broadcastMessage(plugin.prefix + plugin.gray + "The LevelUpGames are started! /lug join");
-				return;
-			}
-			if (this.plugin.toggle == true) {
-				this.plugin.toggle = false;
-				player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "OFF");
-				return;
-			}
+		if (args.length > 1) {
+			plugin.toMuchArgs(player);
+			return;
+		}
+		if (!player.hasPermission("LevelUpgames.toggle")) {
+			plugin.noPerms(player);
+			return;
+		}
+		if (this.plugin.toggle == false) {
+			this.plugin.toggle = true;
+			player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "ON");
+			plugin.getServer().broadcastMessage(plugin.prefix + plugin.gray + "The LevelUpGames are started! /lug join");
+			return;
+		}
+		if (this.plugin.toggle == true) {
+			this.plugin.toggle = false;
+			player.sendMessage(plugin.prefix + plugin.gray + "You toggled the LevelUpGames to " + plugin.blue + "OFF");
+			return;
 		}
 	}
 

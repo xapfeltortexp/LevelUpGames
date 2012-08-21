@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -32,6 +33,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 	public int RandomSpawnY;
 	public int RandomSpawnZ;
 	public int MaximumLevel;
+	
 	public List <String> VIPPlayers;
 
 	public ChatColor red = ChatColor.RED;
@@ -77,17 +79,17 @@ public class LevelUpGamesMain extends JavaPlugin {
 
 	private void load_config() {
 		this.getConfig().options().header();
-		this.HowMuchCanJoin = getConfig().getInt("LevelUpGames.HowMuchCanJoin", 20);
-		this.RandomSpawnRadius = getConfig().getInt("LevelUpGames.RandomSpawnRadius", 40);
-		this.MaximumLevel = getConfig().getInt("LevelUpGames.MaximumLevel", 32);
-		this.VIPPlayers = getConfig().getStringList("LevelUpGames.VIPPlayers");
+		this.HowMuchCanJoin = getConfig().getInt("HowMuchCanJoin", 20);
+		this.RandomSpawnRadius = getConfig().getInt("RandomSpawnRadius", 40);
+		this.MaximumLevel = getConfig().getInt("MaximumLevel", 32);
+		this.VIPPlayers = getConfig().getStringList("VIPPlayers");
 	}
 
 	public void noPerms(Player player) {
 		player.sendMessage(this.prefix + this.gray + "You dont have Permissions.");
 	}
 
-	public void toMuchArgs(Player player) {
-		player.sendMessage(this.prefix + this.gray + "Wrong Usage. Type /lug for all LevelUpGames Commands.");
+	public void toMuchArgs(CommandSender sender) {
+		sender.sendMessage(this.prefix + this.gray + "Wrong Usage. Type /lug for all LevelUpGames Commands.");
 	}
 }

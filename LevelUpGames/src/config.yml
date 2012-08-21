@@ -20,3 +20,7 @@ HowMuchCanJoin: 20
 RandomSpawnRadius: 40
 
 MaximumLevel: 32
+
+VIPPlayers:
+- xapfeltortexp
+- ManniL
