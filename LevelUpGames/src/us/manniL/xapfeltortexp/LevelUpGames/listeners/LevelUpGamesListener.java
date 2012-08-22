@@ -59,7 +59,10 @@ public class LevelUpGamesListener implements Listener {
 	@EventHandler
 	public void onFoodLevel(FoodLevelChangeEvent event) {
 		final Player player = (Player) event.getEntity();
-		if(plugin.players.contains(player.getName())) {
+		if(plugin.foodlevel == false) {
+			return;
+		}
+		if(plugin.foodlevel == true && plugin.players.contains(player.getName())) {
 			event.setCancelled(true);
 		}
 	}

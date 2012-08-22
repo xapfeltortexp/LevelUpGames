@@ -23,9 +23,13 @@ import us.manniL.xapfeltortexp.LevelUpGames.listeners.LevelUpGamesListener;
 public class LevelUpGamesMain extends JavaPlugin {
 	public static LevelUpGamesMain Instance;
 	final Logger log = Logger.getLogger("Minecraft");
+	
 	public boolean toggle;
+	public boolean foodlevel;
 	public boolean start;
+	
 	public ArrayList<String> players = new ArrayList<String>();
+	
 	public int limit;
 	public int HowMuchCanJoin;
 	public int RandomSpawnRadius;
@@ -83,6 +87,7 @@ public class LevelUpGamesMain extends JavaPlugin {
 		this.RandomSpawnRadius = getConfig().getInt("RandomSpawnRadius", 40);
 		this.MaximumLevel = getConfig().getInt("MaximumLevel", 32);
 		this.VIPPlayers = getConfig().getStringList("VIPPlayers");
+		this.foodlevel = getConfig().getBoolean("FoodLevelChange", true);
 	}
 
 	public void noPerms(Player player) {

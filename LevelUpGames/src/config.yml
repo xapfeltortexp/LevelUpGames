@@ -11,6 +11,9 @@
 #     MaxiumumLevel means the MaximumLevel I can reach before the    #
 #     game finished.                                                 #
 #                                                                    #
+#     VIPPlayers means the Players who everytime join                #
+#                                                                    #
+#     FoodLevelChange means: Should the FoodLevelBar activate?       #
 #                                                                    #
 #   Want a Special Plugin? Contact us in Skype jan_hoeck | mannil4   #
 ######################################################################
@@ -20,6 +23,8 @@ HowMuchCanJoin: 20
 RandomSpawnRadius: 40
 
 MaximumLevel: 32
+
+FoodLevelChange: true
 
 VIPPlayers:
 - xapfeltortexp
